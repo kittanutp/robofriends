@@ -1,14 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import Card from './Card';
 import reportWebVitals from './reportWebVitals';
+import 'tachyons';
+import { robots } from './robots'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <h1>Test</h1>
-    <App />
+    <div>
+      <Card id={robots[0].id} name={robots[0].acc_name} email={robots[0].email} />
+      <Card id={robots[1].id} name={robots[1].acc_name} email={robots[1].email} />
+      <Card id={robots[2].id} name={robots[2].acc_name} email={robots[2].email} />
+    </div>
   </React.StrictMode>
 );
 
@@ -16,3 +21,4 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
